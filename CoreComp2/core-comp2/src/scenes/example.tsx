@@ -138,57 +138,57 @@ export default makeScene2D(function* (view) {
     yield*
       sequence(
           0.2,
-          CompTitle().fill("#272727", 0).to("808080", 1),
+          CompTitle().fill("#272727", 0).to("808080", 1.5),
           all(
-              Poly().position.x(1500, 0).to(-700, 1.7),
-              Poly().rotation(-100, 0).to(0, 1.7),
-              CompC().position.x(1530, 0).to(-700, 1.7),
-              CompC().rotation(-100, 0).to(0, 1.7),
+              Poly().position.x(1500, 0).to(-700, 2.55),
+              Poly().rotation(-100, 0).to(0, 2.55),
+              CompC().position.x(1530, 0).to(-700, 2.55),
+              CompC().rotation(-100, 0).to(0, 2.55),
           ),
           all(
-              Poly2().position.x(1550, 0).to(-700, 1.7),
-              Poly2().rotation(-100, 0).to(0, 1.7),
-              CompT().position.x(1550, 0).to(-700, 1.7),
-              CompT().rotation(-100, 0).to(0, 1.7),
+              Poly2().position.x(1550, 0).to(-700, 2.55),
+              Poly2().rotation(-100, 0).to(0, 2.55),
+              CompT().position.x(1550, 0).to(-700, 2.55),
+              CompT().rotation(-100, 0).to(0, 2.55),
           ),
           all(
-              Poly3().position.x(1600, 0).to(-700, 1.7),
-              Poly3().rotation(-100, 0).to(0, 1.7),
-              CompPs().position.x(1630, 0).to(-700, 1.7),
-              CompPs().rotation(-100, 0).to(0, 1.7),
+              Poly3().position.x(1600, 0).to(-700, 2.55),
+              Poly3().rotation(-100, 0).to(0, 2.55),
+              CompPs().position.x(1630, 0).to(-700, 2.55),
+              CompPs().rotation(-100, 0).to(0, 2.55),
           ),
       );
 
     yield* sequence(
         0.6,
-        Communication().text('Communication', 0.7, easeInOutCubic),
-        Thinking().text('Thinking', 0.7, easeInOutCubic),
-        PerSoc().text('Personal & Social', 0.7, easeInOutCubic),
+        Communication().text('Communication', 1.05, easeInOutCubic),
+        Thinking().text('Thinking', 1.05, easeInOutCubic),
+        PerSoc().text('Personal & Social', 1.05, easeInOutCubic),
     );
 
     yield* waitFor(1);
 
     yield* all(
-            Poly().position.x(-700, 0).to(-380, 1),
-            Poly().position.y(-200, 0).to(50, 1),
-            CompC().position.x(-700, 0).to(-380, 1),
-            CompC().position.y(-200, 0).to(50, 1),
+            Poly().position.x(-700, 0).to(-380, 1.5),
+            Poly().position.y(-200, 0).to(50, 1.5),
+            CompC().position.x(-700, 0).to(-380, 1.5),
+            CompC().position.y(-200, 0).to(50, 1.5),
 
-            Communication().position.x(-200, 0).to(120, 1),
-            Communication().position.y(-210, 0).to(50, 1),
+            Communication().position.x(-200, 0).to(120, 1.5),
+            Communication().position.y(-210, 0).to(50, 1.5),
 
-            Poly2().position.y(100, 0).to(5000, 1),
-            CompT().position.y(100, 0).to(5000, 1),
+            Poly2().position.y(100, 0).to(5000, 1.5),
+            CompT().position.y(100, 0).to(5000, 1.5),
 
-            Thinking().position.y(100, 0).to(5000, 1),
+            Thinking().position.y(100, 0).to(5000, 1.5),
 
-            Poly3().position.y(400, 0).to(5000, 1),
-            CompPs().position.y(400, 0).to(5000, 1),
+            Poly3().position.y(400, 0).to(5000, 1.5),
+            CompPs().position.y(400, 0).to(5000, 1.5),
 
-            PerSoc().position.y(400, 0).to(5000, 1),
+            PerSoc().position.y(400, 0).to(5000, 1.5),
     );
 
-    yield* camera().zoom(1.5, 1);
-    yield* waitFor(1);
+    yield* camera().zoom(1.5, 1.5);
+    yield* waitFor(1.5);
 });
 
