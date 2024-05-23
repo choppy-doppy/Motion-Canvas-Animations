@@ -10,8 +10,7 @@ import {
     createRef,
     easeInOutCubic,
     sequence,
-    createSignal, waitFor,
-
+    waitFor,
 } from '@motion-canvas/core';
 
 export default makeScene2D(function* (view) {
@@ -62,7 +61,7 @@ export default makeScene2D(function* (view) {
         <Txt
             ref={CompTitle}
             text={'The Core Competencies'}
-            x={50}
+            x={0}
             y={-450}
             fontWeight={700}
             fontSize={84}
