@@ -10,10 +10,10 @@ import {
     createRef,
     easeInOutCubic,
     sequence,
-    waitFor,
+    waitFor, waitUntil,
 } from '@motion-canvas/core';
 
-export default makeScene2D(function* (view) {
+export default  makeScene2D(function* (view) {
     const Poly = createRef<Polygon>();
     const Poly2 = createRef<Polygon>();
     const Poly3 = createRef<Polygon>();
@@ -177,17 +177,35 @@ export default makeScene2D(function* (view) {
             Communication().position.y(-210, 0).to(50, 1.5),
 
             Poly2().position.y(100, 0).to(5000, 1.5),
+            Poly2().position.x(-700, 0).to(0, 1.5),
             CompT().position.y(100, 0).to(5000, 1.5),
+            CompT().position.x(-700, 0).to(0, 1.5),
 
             Thinking().position.y(100, 0).to(5000, 1.5),
+            Thinking().position.x(-310, 0).to(0, 1.5),
 
             Poly3().position.y(400, 0).to(5000, 1.5),
+            Poly3().position.x(-700, 0).to(0, 1.5),
             CompPs().position.y(400, 0).to(5000, 1.5),
+            CompPs().position.x(-700, 0).to(0, 1.5),
 
             PerSoc().position.y(400, 0).to(5000, 1.5),
+            PerSoc().position.x(-100, 0).to(0, 1.5),
     );
 
     yield* camera().zoom(1.5, 1.5);
-    yield* waitFor(1.5);
+
+    yield* waitUntil('done')
+
+    yield* all(
+        Poly().position.y(50, 0).to(-500, 1.5),
+        CompC().position.y(50, 0).to(-500, 1.5),
+
+        Communication().position.y(50, 0).to(-500, 1.5),
+
+        Poly2().position.y(50, 1.5),
+    );
+
+    yield* waitUntil('end');
 });
 
