@@ -2,12 +2,20 @@
   "version": 0,
   "timeEvents": [
     {
-      "name": "done",
-      "targetTime": 12.700624333790161
+      "name": "doneC",
+      "targetTime": 9.920476628802323
+    },
+    {
+      "name": "doneT",
+      "targetTime": 12.101179464648755
+    },
+    {
+      "name": "donePS",
+      "targetTime": 14.29695821282925
     },
     {
       "name": "end",
-      "targetTime": 17.655025125628136
+      "targetTime": 17.23063117041902
     }
   ],
   "seed": 3405267635

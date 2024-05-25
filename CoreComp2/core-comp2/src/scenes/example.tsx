@@ -61,7 +61,6 @@ export default  makeScene2D(function* (view) {
         <Txt
             ref={CompTitle}
             text={'The Core Competencies'}
-            x={0}
             y={-450}
             fontWeight={700}
             fontSize={84}
@@ -139,22 +138,22 @@ export default  makeScene2D(function* (view) {
           0.2,
           CompTitle().fill("#272727", 0).to("808080", 1.5),
           all(
-              Poly().position.x(1500, 0).to(-700, 2.55),
-              Poly().rotation(-100, 0).to(0, 2.55),
-              CompC().position.x(1530, 0).to(-700, 2.55),
-              CompC().rotation(-100, 0).to(0, 2.55),
+              Poly().position.x(-700, 2.55),
+              Poly().rotation(0, 2.55),
+              CompC().position.x(-700, 2.55),
+              CompC().rotation(0, 2.55),
           ),
           all(
-              Poly2().position.x(1550, 0).to(-700, 2.55),
-              Poly2().rotation(-100, 0).to(0, 2.55),
-              CompT().position.x(1550, 0).to(-700, 2.55),
-              CompT().rotation(-100, 0).to(0, 2.55),
+              Poly2().position.x(-700, 2.55),
+              Poly2().rotation(0, 2.55),
+              CompT().position.x(-700, 2.55),
+              CompT().rotation(0, 2.55),
           ),
           all(
-              Poly3().position.x(1600, 0).to(-700, 2.55),
-              Poly3().rotation(-100, 0).to(0, 2.55),
-              CompPs().position.x(1630, 0).to(-700, 2.55),
-              CompPs().rotation(-100, 0).to(0, 2.55),
+              Poly3().position.x(-700, 2.55),
+              Poly3().rotation(0, 2.55),
+              CompPs().position.x(-700, 2.55),
+              CompPs().rotation(0, 2.55),
           ),
       );
 
@@ -168,43 +167,64 @@ export default  makeScene2D(function* (view) {
     yield* waitFor(1);
 
     yield* all(
-            Poly().position.x(-700, 0).to(-380, 1.5),
-            Poly().position.y(-200, 0).to(50, 1.5),
-            CompC().position.x(-700, 0).to(-380, 1.5),
-            CompC().position.y(-200, 0).to(50, 1.5),
+            Poly().position.x(-380, 1.5),
+            Poly().position.y(50, 1.5),
+            CompC().position.x(-380, 1.5),
+            CompC().position.y(50, 1.5),
 
-            Communication().position.x(-200, 0).to(120, 1.5),
-            Communication().position.y(-210, 0).to(50, 1.5),
+            Communication().position.x(120, 1.5),
+            Communication().position.y(50, 1.5),
 
-            Poly2().position.y(100, 0).to(5000, 1.5),
-            Poly2().position.x(-700, 0).to(0, 1.5),
-            CompT().position.y(100, 0).to(5000, 1.5),
-            CompT().position.x(-700, 0).to(0, 1.5),
+            Poly2().position.y(800, 1.5),
+            Poly2().position.x(-380, 1.5),
+            CompT().position.y(800, 1.5),
+            CompT().position.x(-380, 1.5),
 
-            Thinking().position.y(100, 0).to(5000, 1.5),
-            Thinking().position.x(-310, 0).to(0, 1.5),
+            Thinking().position.y(800, 1.5),
+            Thinking().position.x(10, 1.5),
 
-            Poly3().position.y(400, 0).to(5000, 1.5),
-            Poly3().position.x(-700, 0).to(0, 1.5),
-            CompPs().position.y(400, 0).to(5000, 1.5),
-            CompPs().position.x(-700, 0).to(0, 1.5),
+            Poly3().position.y(1100, 1.5),
+            Poly3().position.x(-380, 1.5),
+            CompPs().position.y(1100, 1.5),
+            CompPs().position.x(-380, 1.5),
 
-            PerSoc().position.y(400, 0).to(5000, 1.5),
-            PerSoc().position.x(-100, 0).to(0, 1.5),
+            PerSoc().position.y(1100, 1.5),
+            PerSoc().position.x(200, 1.5),
     );
 
     yield* camera().zoom(1.5, 1.5);
 
-    yield* waitUntil('done')
+    yield* waitUntil('doneC')
 
     yield* all(
-        Poly().position.y(50, 0).to(-500, 1.5),
-        CompC().position.y(50, 0).to(-500, 1.5),
+        Poly().position.y(-500, 1.5),
+        CompC().position.y(-500, 1.5),
 
-        Communication().position.y(50, 0).to(-500, 1.5),
+        Communication().position.y(-500, 1.5),
 
         Poly2().position.y(50, 1.5),
+        CompT().position.y(50, 1.5),
+
+        Thinking().position.y(50, 1.5),
     );
+
+    yield* waitUntil('doneT');
+
+    yield* all(
+        Poly2().position.y(-500, 1.5),
+        CompT().position.y(-500, 1.5),
+
+        Thinking().position.y(-500, 1.5),
+
+        Poly3().position.y(50, 1.5),
+        CompPs().position.y(50, 1.5),
+
+        PerSoc().position.y(50, 1.5),
+    );
+
+    yield* waitUntil('donePS');
+
+    yield* camera().x(2000, 1.5);
 
     yield* waitUntil('end');
 });
