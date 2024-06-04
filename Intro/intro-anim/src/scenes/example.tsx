@@ -8,15 +8,15 @@ import {
 
 import {
     createRef,
-    all,
-    sequence,
     easeInOutCubic,
-    waitFor,
+    waitUntil,
+    chain,
 } from '@motion-canvas/core';
 
 export default makeScene2D(function* (view) {
     const camera = createRef<Camera>();
     const title = createRef<Txt>();
+    const subtitle = createRef<Txt>();
 
     view.fill('#272727');
 
@@ -25,20 +25,28 @@ export default makeScene2D(function* (view) {
             <Txt
                 ref={title}
                 text={''}
-                x={0}
-                y={-450}
+                y={-350}
                 fontWeight={700}
                 fontSize={84}
                 fontFamily={'Jetbrains Mono'}
-                fill={'WHITE'}
+                fill={'#e5e4e2'}
+            />
+            <Txt
+                ref={subtitle}
+                text={''}
+                y={-200}
+                fontWeight={700}
+                fontSize={70}
+                fontFamily={'Jetbrains Mono'}
+                fill={'#e5e4e2'}
             />
         </Camera>
     );
 
-    yield* sequence(
-        0.5,
-        title().text('Animation', 1.05, easeInOutCubic),
+    yield* chain(
+        title().text('Animation', 1.5, easeInOutCubic),
+        subtitle().text('Traditional, to modern', 1.5, easeInOutCubic),
     );
 
-    yield* waitFor(0.5);
+    yield* waitUntil('end');
 });
