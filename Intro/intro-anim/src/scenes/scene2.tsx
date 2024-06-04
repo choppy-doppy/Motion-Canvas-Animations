@@ -10,13 +10,13 @@ import {
     chain,
     createRef,
     easeInOutCubic,
-    fadeTransition,
+    fadeTransition, sequence, waitFor,
     waitUntil,
 } from "@motion-canvas/core";
 
 import pika from '../images/pika.png';
 import spunch from '../images/spunch.png';
-import tnj from '../images/spunch.png';
+import tnj from '../images/tnj.png';
 
 export default makeScene2D(function* (view) {
     const title = createRef<Txt>();
@@ -81,8 +81,18 @@ export default makeScene2D(function* (view) {
 
     yield* subtitle().text('Entertainment', 1.5, easeInOutCubic);
 
-    yield* all(
+    yield* sequence(
+        1.5,
         pikaRef().opacity(1, 1),
+        all(
+            pikaRef().opacity(0, 1),
+            spunchRef().opacity(1, 1),
+        ),
+        all(
+            spunchRef().opacity(0, 1),
+            tnjRef().opacity(1, 1),
+        ),
+        tnjRef().opacity(0, 1),
     );
 
     yield* waitUntil('vis');

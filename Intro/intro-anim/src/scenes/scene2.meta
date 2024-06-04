@@ -7,15 +7,15 @@
     },
     {
       "name": "vis",
-      "targetTime": 6.3041870158623645
+      "targetTime": 10.339894674524945
     },
     {
       "name": "learn",
-      "targetTime": 8.992120272625106
+      "targetTime": 12.886492087562509
     },
     {
       "name": "end",
-      "targetTime": 12.261510711448775
+      "targetTime": 14.386492087562509
     }
   ],
   "seed": 3213063736

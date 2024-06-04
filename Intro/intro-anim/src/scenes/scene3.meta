@@ -2,8 +2,16 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "comp",
+      "targetTime": 2.860282714322855
+    },
+    {
+      "name": "uni",
+      "targetTime": 5.600207290320993
+    },
+    {
       "name": "end",
-      "targetTime": 3.6368626633573116
+      "targetTime": 6.4395419642349
     }
   ],
   "seed": 3204932371

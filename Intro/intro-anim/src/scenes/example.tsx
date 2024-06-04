@@ -22,7 +22,6 @@ export default makeScene2D(function* (view) {
 
     view.fill('#272727');
 
-    yield* beginSlide('first slide')
     view.add(
         <Camera ref={camera}>
             <Txt
