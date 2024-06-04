@@ -3,19 +3,15 @@
   "timeEvents": [
     {
       "name": "doneC",
-      "targetTime": 10.658315644946923
+      "targetTime": 11.5182844612054
     },
     {
       "name": "doneT",
-      "targetTime": 12.373578682402693
+      "targetTime": 14.335170356415802
     },
     {
       "name": "donePS",
-      "targetTime": 14.088841719858463
-    },
-    {
-      "name": "end",
-      "targetTime": 15.782578453568656
+      "targetTime": 17.27036710344213
     }
   ],
   "seed": 585868448

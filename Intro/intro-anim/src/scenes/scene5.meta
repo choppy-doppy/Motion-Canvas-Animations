@@ -2,8 +2,20 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "mamácito",
+      "targetTime": 3.627303341727881
+    },
+    {
+      "name": "comp",
+      "targetTime": 7.946902557894406
+    },
+    {
+      "name": "cmprt",
+      "targetTime": 10.848176197367135
+    },
+    {
       "name": "end",
-      "targetTime": 10.086735033387043
+      "targetTime": 14.182442236173543
     }
   ],
   "seed": 1556994052

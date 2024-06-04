@@ -14,9 +14,6 @@ import {
 } from '@motion-canvas/core';
 
 export default  makeScene2D(function* (view) {
-    view.fill('#272727');
-    yield* fadeTransition(1);
-
     const Poly = createRef<Polygon>();
     const Poly2 = createRef<Polygon>();
     const Poly3 = createRef<Polygon>();
@@ -29,8 +26,8 @@ export default  makeScene2D(function* (view) {
     const PerSoc = createRef<Txt>();
     const camera = createRef<Camera>();
 
-
-
+    view.fill('#272727');
+    yield* fadeTransition(1);
 
     view.add(
         <Camera ref={camera}>
@@ -227,8 +224,7 @@ export default  makeScene2D(function* (view) {
 
     yield* waitUntil('donePS');
 
-    yield* camera().x(2000, 1.5);
+    yield* camera().x(2000, 1);
 
-    yield* waitUntil('end');
 });
 

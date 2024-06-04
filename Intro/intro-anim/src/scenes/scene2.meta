@@ -3,19 +3,19 @@
   "timeEvents": [
     {
       "name": "ent",
-      "targetTime": 2.8398946745249445
+      "targetTime": 4.2421861281176145
     },
     {
       "name": "vis",
-      "targetTime": 10.339894674524945
+      "targetTime": 13.549882953792485
     },
     {
       "name": "learn",
-      "targetTime": 12.886492087562509
+      "targetTime": 17.530318382690748
     },
     {
       "name": "end",
-      "targetTime": 15.443732817092402
+      "targetTime": 20.728637940005946
     }
   ],
   "seed": 3213063736

@@ -1,4 +1,4 @@
-import {makeScene2D, Txt} from "@motion-canvas/2d";
+import {Camera, makeScene2D, Txt} from "@motion-canvas/2d";
 import {
     chain,
     createRef,
@@ -12,20 +12,22 @@ import {
 
 export default makeScene2D(function* (view) {
     const title = createRef<Txt>();
+    const camera = createRef<Camera>();
 
     view.fill('#272727');
-    yield* fadeTransition(1);
 
     view.add(
-        <Txt
-            ref={title}
-            text={''}
-            y={50}
-            fontWeight={700}
-            fontSize={300}
-            fontFamily={'Jetbrains Mono'}
-            fill={'#e5e4e2'}
-        />
+        <Camera ref={camera}>
+            <Txt
+                ref={title}
+                text={''}
+                y={50}
+                fontWeight={700}
+                fontSize={300}
+                fontFamily={'Jetbrains Mono'}
+                fill={'#e5e4e2'}
+            />
+        </Camera>
     );
 
     yield* chain(
