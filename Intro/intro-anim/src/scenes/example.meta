@@ -2,8 +2,16 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "tool",
+      "targetTime": 5.807747316378694
+    },
+    {
+      "name": "learn.",
+      "targetTime": 8.405291388519508
+    },
+    {
       "name": "end",
-      "targetTime": 4.786675866777057
+      "targetTime": 12.629292266623823
     }
   ],
   "seed": 3782599878

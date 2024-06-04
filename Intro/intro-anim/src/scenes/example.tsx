@@ -1,25 +1,28 @@
 import {
-    Circle,
+    Camera, Img,
     makeScene2D,
     Txt,
-    Polygon,
-    Camera,
 } from '@motion-canvas/2d';
 
 import {
+    beginSlide,
+    chain,
     createRef,
     easeInOutCubic,
     waitUntil,
-    chain,
 } from '@motion-canvas/core';
+
+import learning from '../images/learning.png';
 
 export default makeScene2D(function* (view) {
     const camera = createRef<Camera>();
     const title = createRef<Txt>();
     const subtitle = createRef<Txt>();
+    const imageRef = createRef<Img>();
 
     view.fill('#272727');
 
+    yield* beginSlide('first slide')
     view.add(
         <Camera ref={camera}>
             <Txt
@@ -45,8 +48,29 @@ export default makeScene2D(function* (view) {
 
     yield* chain(
         title().text('Animation', 1.5, easeInOutCubic),
-        subtitle().text('Traditional, to modern', 1.5, easeInOutCubic),
+        subtitle().text('Traditional To Modern', 1.5, easeInOutCubic),
     );
 
+    yield* waitUntil('tool');
+
+    yield* chain(
+      subtitle().text('How Its Used As A Tool', 1.5, easeInOutCubic),
+    );
+
+    yield* waitUntil('learn.')
+
+    view.add(
+        <Img
+            ref={imageRef}
+            src={learning}
+            scale={0.5}
+            y={200}
+            opacity={0}
+        />
+    );
+
+    yield* imageRef().opacity(1, 1);
+
     yield* waitUntil('end');
+
 });
