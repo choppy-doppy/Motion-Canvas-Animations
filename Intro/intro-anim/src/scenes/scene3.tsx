@@ -56,13 +56,13 @@ export default makeScene2D(function* (view) {
 
     yield* waitUntil('comp')
 
-    yield* compRef().opacity(1, 0.5);
+    yield* compRef().opacity(1, 1);
 
     yield* waitUntil('uni');
 
     yield* all(
-        compRef().opacity(0, 0.5),
-        truRef().opacity(1, 0.5),
+        compRef().opacity(0, 1),
+        truRef().opacity(1, 1),
     );
 
     yield* waitUntil('end');

@@ -2,8 +2,24 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "tri",
+      "targetTime": 3.040831441747606
+    },
+    {
+      "name": "!!!",
+      "targetTime": 7.378087650517585
+    },
+    {
+      "name": "vid",
+      "targetTime": 10.290163844635238
+    },
+    {
+      "name": "capst",
+      "targetTime": 13.401945757000613
+    },
+    {
       "name": "end",
-      "targetTime": 3.5280744895341076
+      "targetTime": 17.313120135122933
     }
   ],
   "seed": 772599180

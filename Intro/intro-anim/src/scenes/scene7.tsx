@@ -20,9 +20,9 @@ export default makeScene2D(function* (view) {
         <Txt
             ref={title}
             text={''}
-            y={-350}
+            y={50}
             fontWeight={700}
-            fontSize={84}
+            fontSize={300}
             fontFamily={'Jetbrains Mono'}
             fill={'#e5e4e2'}
         />
