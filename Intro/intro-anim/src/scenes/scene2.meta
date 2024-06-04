@@ -2,8 +2,20 @@
   "version": 0,
   "timeEvents": [
     {
+      "name": "ent",
+      "targetTime": 2.8398946745249445
+    },
+    {
+      "name": "vis",
+      "targetTime": 6.3041870158623645
+    },
+    {
+      "name": "learn",
+      "targetTime": 8.992120272625106
+    },
+    {
       "name": "end",
-      "targetTime": 10.64605094201279
+      "targetTime": 12.261510711448775
     }
   ],
   "seed": 3213063736

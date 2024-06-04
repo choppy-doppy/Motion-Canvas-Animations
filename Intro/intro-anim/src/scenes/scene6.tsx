@@ -8,14 +8,15 @@ import {
 import {
     all,
     createRef, Direction,
-    easeInOutCubic,
+    easeInOutCubic, fadeTransition,
     sequence, slideTransition,
     waitFor, waitUntil,
 } from '@motion-canvas/core';
 
 export default  makeScene2D(function* (view) {
     view.fill('#272727');
-    yield* slideTransition(Direction.Left);
+    yield* fadeTransition(1);
+
     const Poly = createRef<Polygon>();
     const Poly2 = createRef<Polygon>();
     const Poly3 = createRef<Polygon>();

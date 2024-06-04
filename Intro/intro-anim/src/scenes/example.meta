@@ -3,15 +3,15 @@
   "timeEvents": [
     {
       "name": "tool",
-      "targetTime": 5.807747316378694
+      "targetTime": 3.6630314630217917
     },
     {
       "name": "learn.",
-      "targetTime": 8.405291388519508
+      "targetTime": 5.907220161744516
     },
     {
       "name": "end",
-      "targetTime": 12.629292266623823
+      "targetTime": 8.051312777989821
     }
   ],
   "seed": 3782599878
